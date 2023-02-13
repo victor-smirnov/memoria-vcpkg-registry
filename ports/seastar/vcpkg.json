@@ -1,0 +1,8 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "seastar",
+  "version": "1.0.0",
+  "description": "High performance server-side application framework (Memoria Edition)",
+  "homepage": "https://github.com/victor-smirnov/seastar",
+  "dependencies": ["atomic-queue", "fmt"]
+}
