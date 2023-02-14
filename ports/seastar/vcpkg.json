@@ -4,5 +4,26 @@
   "version": "1.0.0",
   "description": "High performance server-side application framework (Memoria Edition)",
   "homepage": "https://github.com/victor-smirnov/seastar",
-  "dependencies": ["atomic-queue", "fmt"]
+  "dependencies": [
+    "atomic-queue",
+    {"name": "gmp", "version>=": "6.2.1#15"},
+    {"name": "numactl", "version>=": "2.0.14"},
+    {"name": "hwloc", "version>=": "2.9.0"},
+    {"name":  "zlib", "version>=": "1.2.12"},
+    {"name":  "yaml-cpp", "version>=": "0.7.0"},
+    {"name":  "c-ares", "version>=": "1.18.1"},
+    {"name":  "cryptopp", "version>=": "8.7.0"},
+    {"name":  "lz4", "version>=": "1.9.4"},
+    {"name":  "fmt", "version>=": "9.1.0"},
+    {"name":  "liburing", "version>=": "2.1"},
+
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
 }
