@@ -1,14 +1,20 @@
 vcpkg_from_github(
 	OUT_SOURCE_PATH SOURCE_PATH
-	REPO victor-smirnov/seastar
-	REF 5f8f581c31a4ca1b28493a8015d1306ace6c055e
-	SHA512 cf3f69697d48f1d464fe27f18c685099dad47ab6f0d48ddcd429429b79e03774f9ba39f188898052840ac1366477d94fa03fd39532708f944c21fd3d8cea6ef7
-	HEAD_REF memoria
+	REPO scylladb/seastar
+	REF ${VERSION}
+	SHA512 22b762e6e5af38b48f7686f65ee62b11fb3d2a2ab8d5705d2437ad4ac177ff3fa4edfd4e6d249701b29f7b4af2d28dca0082a560248fc949f13ce60184ec1673
+	HEAD_REF master
 )
 
 vcpkg_configure_cmake(
 	SOURCE_PATH "${SOURCE_PATH}"
 	PREFER_NINJA
+    OPTIONS
+        -DSeastar_DEMOS=OFF
+        -DSeastar_TESTING=OFF
+        -DSeastar_APPS=OFF
+        -DSeastar_DOCS=OFF
+        -DSeastar_SANITIZE=OFF
 )
 
 vcpkg_install_cmake()
