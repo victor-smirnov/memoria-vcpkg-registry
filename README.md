@@ -1,6 +1,6 @@
-# Memoria Framworks' supporting libraries vcpkg registry
+# Memoria Framwork's supporting libraries vcpkg registry
 
-This is the vcpkg registry for Memoria Framework. Currently it packages Seastar framework but later it may provide other packages as will.
+This is the vcpkg registry provides dependencied used by Memoria Framework's building process. Currently it packages Seastar framework but later it may provide other packages as will.
 
 Specific version Seastar that this registry is referencing has some build issues is Vcpkg-provided Boost libraries. Seastar using Boost testing API that Vcpkg's version of Boost Testing does not provide. So Seastar Testing library is not working.
 
