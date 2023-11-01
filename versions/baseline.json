@@ -1,5 +1,5 @@
 {
   "default": {
-    "seastar": { "version-date": "2023-10-31", "port-version": 0 }
+    "seastar": { "baseline": "2023-10-31", "port-version": 0 }
   }
 }
