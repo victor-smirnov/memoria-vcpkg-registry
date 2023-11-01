@@ -9,7 +9,7 @@
         {"name":  "boost", "version>=": "1.81.0"},
         {"name":  "yaml-cpp", "version>=": "0.7.0"}
     ],
-    "default-features": [],
+    "default-features": ["seastar"],
     "features": {
         "seastar": {
             "description": "Seastar Framework",
