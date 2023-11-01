@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
   "name": "seastar",
-  "version": "1.0.0",
-  "description": "High performance server-side application framework (Memoria Edition)",
-  "homepage": "https://github.com/victor-smirnov/seastar",
+  "version-date": "2023-10-31",
+  "description": "High performance server-side application framework",
+  "homepage": "https://github.com/scylladb/seastar",
   "dependencies": [
     "atomic-queue",
     {"name": "gmp", "version>=": "6.2.1#15"},
