@@ -1,23 +1,28 @@
 {
     "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
     "name": "memoria",
-    "version-date": "2023-10-31",
+    "version-date": "2023-11-01",
     "dependencies": [
         "abseil", "hash-library", "catch2", "lmdb", "icu", "inja", "ftxui",
         "fmt",
         "atomic-queue",
         {"name":  "boost", "version>=": "1.81.0"},
-        {"name":  "yaml-cpp", "version>=": "0.7.0"}
+        {"name":  "yaml-cpp", "version>=": "0.7.0"},
+        {
+            "name": "vcpkg-cmake",
+            "host": true
+        },
+        {
+            "name": "vcpkg-cmake-config",
+            "host": true
+        }
     ],
     "default-features": ["seastar"],
     "features": {
         "seastar": {
             "description": "Seastar Framework",
             "dependencies": [
-                {
-                    "name": "seastar",
-                    "platform": "linux"
-                }
+                { "name": "seastar", "platform": "linux" }
             ]
         }
     }
