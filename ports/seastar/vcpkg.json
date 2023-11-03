@@ -4,6 +4,7 @@
   "version-date": "2023-10-31",
   "description": "High performance server-side application framework",
   "homepage": "https://github.com/scylladb/seastar",
+  "supports": "linux",
   "dependencies": [
     "atomic-queue",
     {"name": "gmp", "version>=": "6.2.1#15"},
@@ -16,7 +17,6 @@
     {"name": "lz4", "version>=": "1.9.4"},
     {"name": "fmt", "version>=": "9.1.0"},
     {"name": "liburing", "version>=": "2.1"},
-    {"name": "boost", "version>=": "1.81.0"},
     {
       "name": "vcpkg-cmake",
       "host": true
@@ -25,5 +25,16 @@
       "name": "vcpkg-cmake-config",
       "host": true
     }
-  ]
+  ],
+  "features": {
+    "tests": {"description": "Seastar Tests"},
+    "apps": {"description": "Seastar Apps"},
+    "sanitize": {"description": "Build with sanitizer"},
+    "with-boost": {
+        "description": "Build with Vcpkg-provided Boost library",
+        "dependencies": [
+            {"name":  "boost", "version>=": "1.83.0"}
+        ]
+    }
+  }
 }

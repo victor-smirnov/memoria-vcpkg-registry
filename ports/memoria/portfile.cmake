@@ -6,11 +6,18 @@ vcpkg_from_github(
 	HEAD_REF master
 )
 
+vcpkg_check_features(OUT_FEATURE_OPTIONS MEMORIA_FEATURES
+    FEATURES
+        seastar BUILD_SEASTAR
+        core_only CORE_ONLY
+)
+
 vcpkg_configure_cmake(
 	SOURCE_PATH "${SOURCE_PATH}"
 	PREFER_NINJA
     OPTIONS
-        -DBUILD_SEASTAR=ON
+        ${MEMORIA_FEATURES}
+
 )
 
 vcpkg_install_cmake()
@@ -27,3 +34,5 @@ file(
 file(
 	INSTALL "${SOURCE_PATH}/NOTICE"
 	DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
+
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")

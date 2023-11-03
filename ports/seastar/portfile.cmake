@@ -1,3 +1,8 @@
+if ("with-boost" IN_LIST FEATURES)
+    set(PATCHES_FOR_SEASTAR fix-build.patch)
+endif()
+
+
 vcpkg_from_github(
 	OUT_SOURCE_PATH SOURCE_PATH
 	REPO scylladb/seastar
@@ -5,15 +10,23 @@ vcpkg_from_github(
 	SHA512 125cd51cdf5571c6376d0037a52cd4c14b4bb451fef577a9d35ab8d3c5004e2b50e8e3e28224465adf853dbc764169197d997eb61e84e77f7bb56a13dce0617e
 	HEAD_REF master
     PATCHES
-        fix-build.patch
+        ${PATCHES_FOR_SEASTAR}
 )
+
+vcpkg_check_features(
+    OUT_FEATURE_OPTIONS SEASTAR_FEATURE_OPTIONS
+    FEATURES
+      sanitize Seastar_SANITIZE
+      tests    Seastar_TESTING
+)
+
+
 
 vcpkg_configure_cmake(
 	SOURCE_PATH "${SOURCE_PATH}"
 	PREFER_NINJA
     OPTIONS
-        -DSeastar_TESTING=OFF
-        -DSeastar_SANITIZE=OFF
+        ${SEASTAR_FEATURE_OPTIONS}
         -DSeastar_CXX_FLAGS=-Wno-error
 )
 
