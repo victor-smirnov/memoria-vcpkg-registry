@@ -5,6 +5,7 @@
   "description": "High performance server-side application framework",
   "homepage": "https://github.com/scylladb/seastar",
   "supports": "linux",
+  "port-version": 1,
   "dependencies": [
     "atomic-queue",
     {"name": "gmp", "version>=": "6.2.1#15"},
