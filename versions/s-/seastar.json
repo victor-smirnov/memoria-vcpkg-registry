@@ -1,7 +1,7 @@
 {
 	"versions": [
         {
-			"version-date": "1.0-2023-11-02",
+			"version-string": "1.0-2023-11-02",
 			"git-tree": "ad1d828fdb94fccc4b2b2db9ed8c1a6549fc544e",
             "port-version": 0
 		},
