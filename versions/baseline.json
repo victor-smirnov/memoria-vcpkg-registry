@@ -1,6 +1,6 @@
 {
   "default": {
-    "seastar": { "baseline": "2023-10-31", "port-version": 1 },
+    "seastar": { "baseline": "2023-11-02", "port-version": 0 },
     "memoria": { "baseline": "2023-11-01", "port-version": 0 }
   }
 }
