@@ -1,12 +1,12 @@
 {
     "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
     "name": "memoria",
-    "version-date": "2023-11-01",
+    "version-string": "0.1.0-2023-11-05",
+    "port-version": 0,
     "dependencies": [
         "abseil", "hash-library", "catch2", "lmdb", "icu", "inja", "ftxui",
         "fmt",
         "atomic-queue",
-        {"name":  "boost", "version>=": "1.81.0"},
         {"name":  "yaml-cpp", "version>=": "0.7.0"},
         {
             "name": "vcpkg-cmake",
@@ -23,6 +23,22 @@
             "description": "Seastar Framework",
             "dependencies": [
                 { "name": "seastar", "platform": "linux" }
+            ]
+        },
+        "seastar-with-boost": {
+            "description": "Seastar Framework",
+            "dependencies": [
+                { "name": "seastar", "platform": "linux", "features": ["with-boost"] },
+                { "name": "boost", "version>=": "1.83.0" }
+            ]
+        },
+
+        "core-only": {"description": "Build only Memoria Core library and tools"},
+
+        "with-boost": {
+            "description": "Build with Vcpkg-provided Boost library",
+            "dependencies": [
+                { "name":  "boost", "version>=": "1.83.0" }
             ]
         }
     }
