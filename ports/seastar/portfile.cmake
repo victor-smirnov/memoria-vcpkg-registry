@@ -1,12 +1,12 @@
-if ("with-boost" IN_LIST FEATURES)
-    set(PATCHES_FOR_SEASTAR fix-build.patch)
-endif()
+#if ("with-boost" IN_LIST FEATURES)
+#    set(PATCHES_FOR_SEASTAR fix-build.patch)
+#endif()
 
 
 vcpkg_from_github(
 	OUT_SOURCE_PATH SOURCE_PATH
 	REPO scylladb/seastar
-	REF 37560d53a9d1dbcf79d217a8a85fe60a57fecf30
+	REF 8df8212e53577e1d8477a5c901457cd61d88afc7
 	SHA512 aeb84803d488de7c149bd71fa847646bbeed4b3c86e947e575f8f3b96c6a8c054403c8a347ee885dabf4f9a6431c3daca4ef821bee487b56df7b0fab2a978b5b
 	HEAD_REF master
     PATCHES
