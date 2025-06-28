@@ -3,8 +3,8 @@ This is custom Vcpkg repository supporting Memoria and its applications.
 Vcpkg: https://github.com/microsoft/vcpkg
 
 Ports (projects) provided by this repository:
-    * seastar: https://github.com/scylladb/seastar
-    * memoria: https://github.com/victor-smirnov/memoria
+* seastar: https://github.com/scylladb/seastar
+* memoria: https://github.com/victor-smirnov/memoria
 
 When projects are updated (new versions) in thier corresponding repositories, thier ports in this repository has to be updated too, for users of these ports to use those new versions.
 
@@ -37,13 +37,13 @@ Here you need to stop and ask if user wants to make any other changes to port fi
 Step 2. (finish changes)
 
 Commit the port. Run the following command:
-    * git rev-parse HEAD:ports/<port name>
+* git rev-parse HEAD:ports/<port name>
 
 for example, for memoria port: 
-    * $git rev-parse HEAD:ports/memoria
+* $git rev-parse HEAD:ports/memoria
 
 It will return you the commit hash code like this:
-    * 4829e05361ad336df352e433833e2f3014925ade
+* 4829e05361ad336df352e433833e2f3014925ade
 
 Read the code. Now find the port in the versions sub-folder (subfolders are named according to first port's letter, like "m-" for memoria) and update <port_name>.json file. Add new json object to the array of versions:
 ```
