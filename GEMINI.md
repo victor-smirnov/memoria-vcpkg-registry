@@ -36,10 +36,14 @@ Here you need to stop and ask if user wants to make any other changes to port fi
 
 Step 2. (finish changes)
 
-Commit the port. Run the following command:
+Run the following commands:
+* git add ports/<port name>
+* git commit -m "Updated <port name>"
 * git rev-parse HEAD:ports/<port name>
 
 for example, for memoria port: 
+* $git add ports/memoria
+* $git commit -m "Updated memoria port"
 * $git rev-parse HEAD:ports/memoria
 
 It will return you the commit hash code like this:
